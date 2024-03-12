@@ -10,6 +10,7 @@
 @import "Font.css";
 /* ---Css Variables--- */
 :root{
+    --sb-size: 13px;
     /* ---Color Variables--- */
     --color__smooth-orange: #FAF4F2;
     --color__ultra-smooth-orange: #F8E1DB;
@@ -17,6 +18,8 @@
     --color__org-white: #fff;
     --color__smooth-black: #3B3735;
     --color__gray-100:#8D8D8D;
+    --sb-track-color: #5d4742;
+    --sb-thumb-color: #e76f51;
     /* ---Font Variables--- */
     --font__primary:"Roboto Regular", sans-serif, Serif;
     --font__primary-md:"Roboto Medium", sans-serif, Serif;
@@ -87,7 +90,25 @@ body{
     font-family: var(--font__primary);
     overflow-x: hidden;
 }
-/* ---Scroll Status Bar--- */
+/*Scroll Bar Config*/
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+}
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color)
+        var(--sb-track-color);
+    }
+}
+/* ---Scroll Status Head--- */
 .scroll-status{
     position: fixed;
     top: 0;
@@ -1019,7 +1040,6 @@ body{
     .footer__right{
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -ms-flex-flow: row ;
         flex-flow: row ;
     }
 }
