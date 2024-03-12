@@ -11,7 +11,7 @@
   <li>Clean coding and easy to understand for the audience</li>
   <li>Full Responsive (320px to 2500px)</li>
   <li>Beautiful Design and Picture</li>
-  <li>Old browsers are supported (Prefix (Mozila - Chrome - Firefox - Edge - Sadari))</li>
+  <li>Old browsers are supported (Prefix (Chrome - Firefox - Edge - Sadari))</li>
 </ul>
 <br>
 ⚒   Language & Tool :
