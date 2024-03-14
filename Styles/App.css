@@ -1170,3 +1170,8 @@ body::-webkit-scrollbar-thumb {
         min-height: 62rem;
     }
 }
+@media only screen and (max-height: 450px){
+    *, *::before, *::after{
+        cursor:none;
+    }
+}
